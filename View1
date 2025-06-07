@@ -1,0 +1,66 @@
+<html>
+  <head>
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="" />
+    <link
+      rel="stylesheet"
+      as="style"
+      onload="this.rel='stylesheet'"
+      href="https://fonts.googleapis.com/css2?display=swap&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900&amp;family=Plus+Jakarta+Sans%3Awght%40400%3B500%3B700%3B800"
+    />
+
+    <title>Stitch Design</title>
+    <link rel="icon" type="image/x-icon" href="data:image/x-icon;base64," />
+
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  </head>
+  <body>
+    <div
+      class="relative flex size-full min-h-screen flex-col bg-slate-50 justify-between group/design-root overflow-x-hidden"
+      style='font-family: "Plus Jakarta Sans", "Noto Sans", sans-serif;'
+    >
+      <div>
+        <div class="flex items-center bg-slate-50 p-4 pb-2 justify-between">
+          <div class="text-[#0c151d] flex size-12 shrink-0 items-center" data-icon="ArrowLeft" data-size="24px" data-weight="regular">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor" viewBox="0 0 256 256">
+              <path d="M224,128a8,8,0,0,1-8,8H59.31l58.35,58.34a8,8,0,0,1-11.32,11.32l-72-72a8,8,0,0,1,0-11.32l72-72a8,8,0,0,1,11.32,11.32L59.31,120H216A8,8,0,0,1,224,128Z"></path>
+            </svg>
+          </div>
+          <h2 class="text-[#0c151d] text-lg font-bold leading-tight tracking-[-0.015em] flex-1 text-center pr-12">ParkEase</h2>
+        </div>
+        <h2 class="text-[#0c151d] tracking-light text-[28px] font-bold leading-tight px-4 text-center pb-3 pt-5">Welcome to ParkEase</h2>
+        <p class="text-[#0c151d] text-base font-normal leading-normal pb-3 pt-1 px-4 text-center">Please select your vehicle type to continue with parking.</p>
+        <div class="grid grid-cols-[repeat(auto-fit,minmax(158px,1fr))] gap-3 p-4">
+          <div class="flex flex-col gap-3 pb-3">
+            <div
+              class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-xl"
+              style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBuTgt4r6cNSwvKtlg4eCL10NoMGY4p5MX9Cn103F3hUJW7EwQVvfRkzkIqeIcmNCuwvW_WDvEvhBsN11vsqNKbUyUtrIF9CBWdeOlDPYvdMP3wTUED8SukXfvyGLGYg5fa1VuKpc3VZX7QESkijH2B4Hdf2qwDkYy-cDj_YFWDWnvSx0c-WAK8aP2vvZ0omFDYYL7lgVqMu4l3kKNtQvRilGafdhxFxGbarpoujk825baA_tTHe4FoAcYboh9fUcF4h1cnk3u8u9Si");'
+            ></div>
+            <p class="text-[#0c151d] text-base font-medium leading-normal">Kick Scooter</p>
+          </div>
+          <div class="flex flex-col gap-3 pb-3">
+            <div
+              class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-xl"
+              style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDDa96_iF5qHa8Y2cwXV1l_dw79JHnvZ4WAvu25wItTo0qhFJuNGMrGLLncDjRWF50bk4-nmh4qqiX0L_xctroEcdDyld1aRSxihe3ttR-XTJ-x3PPNjcSCmEsII03nq7YRd1XmY_KG216v1pZf8HmnJYPzSv1eIPZDoNdNJqp4ibMVaYsy2_GUim3-rBEmDF6gi-6TRb0xLKPF3FqbJWj3rIsNXcXKiUFU96G0SKK-1nOWzIMrqN5GKdXWloQOz2hnEBR4BqHD8qSL");'
+            ></div>
+            <p class="text-[#0c151d] text-base font-medium leading-normal">Motorcycle</p>
+          </div>
+          <div class="flex flex-col gap-3 pb-3">
+            <div
+              class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-xl"
+              style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBWhMyyHW5MKko7X6BGFD2j5f4unH4Hs4QNTv9v73-7sGBJlV1YkdnPso0uCN0VabpFlZpQc-UJX07BI2RigiThcQbcNP_Pz3wfePS6-9yti3TXsqyWpHlPiNH5o_7rQKhXdTPZqc1xABeCwUxd0Yk7krX2F3ixBijJAREH20cCrHCjsxxUSzpPcQl9XWPSpGqnBv7MtYZRBWcjMnjahqAIq9xodMu9jfjQJwGSouSsV1AfmKVdTALgLRtx62caHbmUc5dtGPsdBqZy");'
+            ></div>
+            <p class="text-[#0c151d] text-base font-medium leading-normal">Bicycle</p>
+          </div>
+          <div class="flex flex-col gap-3 pb-3">
+            <div
+              class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-xl"
+              style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBFXs3RQofxLpR02aTirnVfgYj6m4qz6khbeElTgfnQF-ToHQONrdsdN_xhVdTTCZQQiWXzlSK_o50KnwLd8B0oL0aX8bWBXxDVqzTyTqVlaacAjqJwCXxwVrXxAuCQoQ4paRgPzURynQ7VbzaZH6eQ770KEEWAuJc2aDcMnj5L1-kXk3-uA_cYiMqs9Ym7zbNe36nabTztLALwDLX1vC7tJoDCTnM8ecmoCLZ3kNj3gLTu9RnBrTJbHSldhd3pfC24siNHaetHMvM2");'
+            ></div>
+            <p class="text-[#0c151d] text-base font-medium leading-normal">Car</p>
+          </div>
+        </div>
+      </div>
+      <div><div class="h-5 bg-slate-50"></div></div>
+    </div>
+  </body>
+</html>
