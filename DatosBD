@@ -1,0 +1,275 @@
+-- BORRADO DE DATOS ANTERIORES (OPCIONAL: usar con precaución)
+-- Descomenta las siguientes líneas si quieres limpiar las tablas antes de insertar los nuevos datos.
+-- SET FOREIGN_KEY_CHECKS = 0;
+-- TRUNCATE TABLE RegistrosDeUso;
+-- TRUNCATE TABLE PuestosDeParqueo;
+-- TRUNCATE TABLE Vehiculos;
+-- TRUNCATE TABLE Usuarios;
+-- SET FOREIGN_KEY_CHECKS = 1;
+
+-- 1. SEMILLA PARA PUESTOS DE PARQUEO
+-- Creación de 100 puestos para carros en 3 pisos
+INSERT INTO PuestosDeParqueo (codigo_puesto, piso, tipo_puesto) VALUES
+('A101', 1, 'Carro'), ('A102', 1, 'Carro'), ('A103', 1, 'Carro'), ('A104', 1, 'Carro'), ('A105', 1, 'Carro'), ('A106', 1, 'Carro'), ('A107', 1, 'Carro'), ('A108', 1, 'Carro'), ('A109', 1, 'Carro'), ('A110', 1, 'Carro'),
+('A111', 1, 'Carro'), ('A112', 1, 'Carro'), ('A113', 1, 'Carro'), ('A114', 1, 'Carro'), ('A115', 1, 'Carro'), ('A116', 1, 'Carro'), ('A117', 1, 'Carro'), ('A118', 1, 'Carro'), ('A119', 1, 'Carro'), ('A120', 1, 'Carro'),
+('A121', 1, 'Carro'), ('A122', 1, 'Carro'), ('A123', 1, 'Carro'), ('A124', 1, 'Carro'), ('A125', 1, 'Carro'), ('A126', 1, 'Carro'), ('A127', 1, 'Carro'), ('A128', 1, 'Carro'), ('A129', 1, 'Carro'), ('A130', 1, 'Carro'),
+('A131', 1, 'Carro'), ('A132', 1, 'Carro'), ('A133', 1, 'Carro'),
+('A201', 2, 'Carro'), ('A202', 2, 'Carro'), ('A203', 2, 'Carro'), ('A204', 2, 'Carro'), ('A205', 2, 'Carro'), ('A206', 2, 'Carro'), ('A207', 2, 'Carro'), ('A208', 2, 'Carro'), ('A209', 2, 'Carro'), ('A210', 2, 'Carro'),
+('A211', 2, 'Carro'), ('A212', 2, 'Carro'), ('A213', 2, 'Carro'), ('A214', 2, 'Carro'), ('A215', 2, 'Carro'), ('A216', 2, 'Carro'), ('A217', 2, 'Carro'), ('A218', 2, 'Carro'), ('A219', 2, 'Carro'), ('A220', 2, 'Carro'),
+('A221', 2, 'Carro'), ('A222', 2, 'Carro'), ('A223', 2, 'Carro'), ('A224', 2, 'Carro'), ('A225', 2, 'Carro'), ('A226', 2, 'Carro'), ('A227', 2, 'Carro'), ('A228', 2, 'Carro'), ('A229', 2, 'Carro'), ('A230', 2, 'Carro'),
+('A231', 2, 'Carro'), ('A232', 2, 'Carro'), ('A233', 2, 'Carro'),
+('A301', 3, 'Carro'), ('A302', 3, 'Carro'), ('A303', 3, 'Carro'), ('A304', 3, 'Carro'), ('A305', 3, 'Carro'), ('A306', 3, 'Carro'), ('A307', 3, 'Carro'), ('A308', 3, 'Carro'), ('A309', 3, 'Carro'), ('A310', 3, 'Carro'),
+('A311', 3, 'Carro'), ('A312', 3, 'Carro'), ('A313', 3, 'Carro'), ('A314', 3, 'Carro'), ('A315', 3, 'Carro'), ('A316', 3, 'Carro'), ('A317', 3, 'Carro'), ('A318', 3, 'Carro'), ('A319', 3, 'Carro'), ('A320', 3, 'Carro'),
+('A321', 3, 'Carro'), ('A322', 3, 'Carro'), ('A323', 3, 'Carro'), ('A324', 3, 'Carro'), ('A325', 3, 'Carro'), ('A326', 3, 'Carro'), ('A327', 3, 'Carro'), ('A328', 3, 'Carro'), ('A329', 3, 'Carro'), ('A330', 3, 'Carro'),
+('A331', 3, 'Carro'), ('A332', 3, 'Carro'), ('A333', 3, 'Carro'), ('A334', 3, 'Carro');
+
+-- Creación de 20 puestos para motos en piso 1
+INSERT INTO PuestosDeParqueo (codigo_puesto, piso, tipo_puesto) VALUES
+('M01', 1, 'Moto'), ('M02', 1, 'Moto'), ('M03', 1, 'Moto'), ('M04', 1, 'Moto'), ('M05', 1, 'Moto'), ('M06', 1, 'Moto'), ('M07', 1, 'Moto'), ('M08', 1, 'Moto'), ('M09', 1, 'Moto'), ('M10', 1, 'Moto'),
+('M11', 1, 'Moto'), ('M12', 1, 'Moto'), ('M13', 1, 'Moto'), ('M14', 1, 'Moto'), ('M15', 1, 'Moto'), ('M16', 1, 'Moto'), ('M17', 1, 'Moto'), ('M18', 1, 'Moto'), ('M19', 1, 'Moto'), ('M20', 1, 'Moto');
+
+-- Creación de 20 puestos para bicicletas en piso 1
+INSERT INTO PuestosDeParqueo (codigo_puesto, piso, tipo_puesto) VALUES
+('B01', 1, 'Bicicleta'), ('B02', 1, 'Bicicleta'), ('B03', 1, 'Bicicleta'), ('B04', 1, 'Bicicleta'), ('B05', 1, 'Bicicleta'), ('B06', 1, 'Bicicleta'), ('B07', 1, 'Bicicleta'), ('B08', 1, 'Bicicleta'), ('B09', 1, 'Bicicleta'), ('B10', 1, 'Bicicleta'),
+('B11', 1, 'Bicicleta'), ('B12', 1, 'Bicicleta'), ('B13', 1, 'Bicicleta'), ('B14', 1, 'Bicicleta'), ('B15', 1, 'Bicicleta'), ('B16', 1, 'Bicicleta'), ('B17', 1, 'Bicicleta'), ('B18', 1, 'Bicicleta'), ('B19', 1, 'Bicicleta'), ('B20', 1, 'Bicicleta');
+
+-- Creación de 20 puestos para patinetas en piso 1
+INSERT INTO PuestosDeParqueo (codigo_puesto, piso, tipo_puesto) VALUES
+('P01', 1, 'Patineta'), ('P02', 1, 'Patineta'), ('P03', 1, 'Patineta'), ('P04', 1, 'Patineta'), ('P05', 1, 'Patineta'), ('P06', 1, 'Patineta'), ('P07', 1, 'Patineta'), ('P08', 1, 'Patineta'), ('P09', 1, 'Patineta'), ('P10', 1, 'Patineta'),
+('P11', 1, 'Patineta'), ('P12', 1, 'Patineta'), ('P13', 1, 'Patineta'), ('P14', 1, 'Patineta'), ('P15', 1, 'Patineta'), ('P16', 1, 'Patineta'), ('P17', 1, 'Patineta'), ('P18', 1, 'Patineta'), ('P19', 1, 'Patineta'), ('P20', 1, 'Patineta');
+
+
+-- 2. SEMILLA PARA USUARIOS (100)
+INSERT INTO Usuarios (nombre, apellido, documento, email, area_empresa) VALUES
+('Sofía', 'García Pérez', '1017234567', 'sofia.garcia@empresa.com', 'Mercadeo'),
+('Mateo', 'Rodriguez López', '1018456789', 'mateo.rodriguez@empresa.com', 'Tecnología'),
+('Valentina', 'Martinez González', '1035678901', 'valentina.martinez@empresa.com', 'Recursos Humanos'),
+('Santiago', 'Hernández Gómez', '1022345678', 'santiago.hernandez@empresa.com', 'Finanzas'),
+('Isabella', 'López Díaz', '1098765432', 'isabella.lopez@empresa.com', 'Operaciones'),
+('Sebastián', 'Pérez Sánchez', '1013456789', 'sebastian.perez@empresa.com', 'Gerencia'),
+('Camila', 'Gómez Torres', '1014567890', 'camila.gomez@empresa.com', 'Tecnología'),
+('Matías', 'Díaz Ramírez', '1015678901', 'matias.diaz@empresa.com', 'Mercadeo'),
+('Mariana', 'Sánchez Jiménez', '1016789012', 'mariana.sanchez@empresa.com', 'Finanzas'),
+('Nicolás', 'Ramírez Morales', '1017890123', 'nicolas.ramirez@empresa.com', 'Tecnología'),
+('Valeria', 'Torres Vargas', '1018901234', 'valeria.torres@empresa.com', 'Recursos Humanos'),
+('Samuel', 'Morales Rojas', '1019012345', 'samuel.morales@empresa.com', 'Operaciones'),
+('Daniela', 'Vargas Castro', '1020123456', 'daniela.vargas@empresa.com', 'Mercadeo'),
+('Alejandro', 'Castro Ortiz', '1021234567', 'alejandro.castro@empresa.com', 'Tecnología'),
+('Gabriela', 'Ortiz Rubio', '1022345678', 'gabriela.ortiz@empresa.com', 'Finanzas'),
+('Diego', 'Rubio Herrera', '1023456789', 'diego.rubio@empresa.com', 'Gerencia'),
+('Luciana', 'Herrera Soto', '1024567890', 'luciana.herrera@empresa.com', 'Tecnología'),
+('Leonardo', 'Soto Medina', '1025678901', 'leonardo.soto@empresa.com', 'Mercadeo'),
+('Martina', 'Medina Peña', '1026789012', 'martina.medina@empresa.com', 'Operaciones'),
+('Adrián', 'Peña Cruz', '1027890123', 'adrian.pena@empresa.com', 'Tecnología'),
+('Paula', 'Cruz Ríos', '1028901234', 'paula.cruz@empresa.com', 'Recursos Humanos'),
+('Felipe', 'Ríos Silva', '1029012345', 'felipe.rios@empresa.com', 'Finanzas'),
+('Renata', 'Silva Paredes', '1030123456', 'renata.silva@empresa.com', 'Mercadeo'),
+('Emiliano', 'Paredes Flores', '1031234567', 'emiliano.paredes@empresa.com', 'Tecnología'),
+('Julieta', 'Flores Romero', '1032345678', 'julieta.flores@empresa.com', 'Operaciones'),
+('Joaquín', 'Romero Acosta', '1033456789', 'joaquin.romero@empresa.com', 'Tecnología'),
+('Sara', 'Acosta Luna', '1034567890', 'sara.acosta@empresa.com', 'Gerencia'),
+('Lucas', 'Luna Mendoza', '1035678901', 'lucas.luna@empresa.com', 'Finanzas'),
+('Victoria', 'Mendoza Castillo', '1036789012', 'victoria.mendoza@empresa.com', 'Mercadeo'),
+('Benjamín', 'Castillo Mora', '1037890123', 'benjamin.castillo@empresa.com', 'Tecnología'),
+('Elena', 'Mora Bravo', '1038901234', 'elena.mora@empresa.com', 'Recursos Humanos'),
+('Tomás', 'Bravo Rojas', '1039012345', 'tomas.bravo@empresa.com', 'Operaciones'),
+('Emilia', 'Rojas Vega', '1040123456', 'emilia.rojas@empresa.com', 'Tecnología'),
+('Thiago', 'Vega Gil', '1041234567', 'thiago.vega@empresa.com', 'Finanzas'),
+('Agustina', 'Gil Campos', '1042345678', 'agustina.gil@empresa.com', 'Mercadeo'),
+('Maximiliano', 'Campos Núñez', '1043456789', 'maximiliano.campos@empresa.com', 'Tecnología'),
+('Catalina', 'Núñez Reyes', '1044567890', 'catalina.nunez@empresa.com', 'Operaciones'),
+('Ignacio', 'Reyes Ponce', '1045678901', 'ignacio.reyes@empresa.com', 'Tecnología'),
+('Pilar', 'Ponce Salas', '1046789012', 'pilar.ponce@empresa.com', 'Recursos Humanos'),
+('Bautista', 'Salas Cabrera', '1047890123', 'bautista.salas@empresa.com', 'Finanzas'),
+('Juan', 'Gomez Rodriguez', '1118456111', 'juan.gomez@empresa.com', 'Tecnología'),
+('Carlos', 'Perez Garcia', '1218456222', 'carlos.perez@empresa.com', 'Mercadeo'),
+('Ana', 'Martinez Sanchez', '1318456333', 'ana.martinez@empresa.com', 'Finanzas'),
+('Luisa', 'Hernandez Lopez', '1418456444', 'luisa.hernandez@empresa.com', 'Recursos Humanos'),
+('Jorge', 'Gonzalez Diaz', '1518456555', 'jorge.gonzalez@empresa.com', 'Operaciones'),
+('Maria', 'Torres Ramirez', '1618456666', 'maria.torres@empresa.com', 'Gerencia'),
+('Andres', 'Morales Vargas', '1718456777', 'andres.morales@empresa.com', 'Tecnología'),
+('Laura', 'Rojas Castro', '1818456888', 'laura.rojas@empresa.com', 'Mercadeo'),
+('David', 'Ortiz Rubio', '1918456999', 'david.ortiz@empresa.com', 'Finanzas'),
+('Carolina', 'Herrera Soto', '2018456000', 'carolina.herrera@empresa.com', 'Tecnología'),
+('Ricardo', 'Medina Peña', '2118456111', 'ricardo.medina@empresa.com', 'Operaciones'),
+('Diana', 'Cruz Rios', '2218456222', 'diana.cruz@empresa.com', 'Recursos Humanos'),
+('Esteban', 'Silva Paredes', '2318456333', 'esteban.silva@empresa.com', 'Mercadeo'),
+('Monica', 'Flores Romero', '2418456444', 'monica.flores@empresa.com', 'Tecnología'),
+('Javier', 'Acosta Luna', '2518456555', 'javier.acosta@empresa.com', 'Finanzas'),
+('Paola', 'Mendoza Castillo', '2618456666', 'paola.mendoza@empresa.com', 'Tecnología'),
+('Oscar', 'Mora Bravo', '2718456777', 'oscar.mora@empresa.com', 'Gerencia'),
+('Sandra', 'Rojas Vega', '2818456888', 'sandra.rojas@empresa.com', 'Operaciones'),
+('Fernando', 'Gil Campos', '2918456999', 'fernando.gil@empresa.com', 'Tecnología'),
+('Patricia', 'Nuñez Reyes', '3018456000', 'patricia.nunez@empresa.com', 'Mercadeo'),
+('Roberto', 'Ponce Salas', '3118456111', 'roberto.ponce@empresa.com', 'Finanzas'),
+('Gloria', 'Cabrera Leon', '3218456222', 'gloria.cabrera@empresa.com', 'Recursos Humanos'),
+('Francisco', 'Guerrero Rios', '3318456333', 'francisco.guerrero@empresa.com', 'Tecnología'),
+('Isabel', 'Marin Navarro', '3418456444', 'isabel.marin@empresa.com', 'Mercadeo'),
+('Eduardo', 'Iglesias Serrano', '3518456555', 'eduardo.iglesias@empresa.com', 'Operaciones'),
+('Teresa', 'Blanco Molina', '3618456666', 'teresa.blanco@empresa.com', 'Tecnología'),
+('Miguel', 'Suarez Ortega', '3718456777', 'miguel.suarez@empresa.com', 'Finanzas'),
+('Carmen', 'Delgado Castro', '3818456888', 'carmen.delgado@empresa.com', 'Gerencia'),
+('Manuel', 'Moreno Ruiz', '3918456999', 'manuel.moreno@empresa.com', 'Tecnología'),
+('Rosa', 'Jimenez Alonso', '4018456000', 'rosa.jimenez@empresa.com', 'Mercadeo'),
+('Jose', 'Gutierrez Sanz', '4118456111', 'jose.gutierrez@empresa.com', 'Operaciones'),
+('Dolores', 'Dominguez Santos', '4218456222', 'dolores.dominguez@empresa.com', 'Recursos Humanos'),
+('Antonio', 'Vazquez Romero', '4318456333', 'antonio.vazquez@empresa.com', 'Tecnología'),
+('Mercedes', 'Ramos Pastor', '4418456444', 'mercedes.ramos@empresa.com', 'Finanzas'),
+('Jesus', 'Vidal Gallardo', '4518456555', 'jesus.vidal@empresa.com', 'Mercadeo'),
+('Pilar', 'Bravo Pascual', '4618456666', 'pilar.bravo@empresa.com', 'Tecnología'),
+('Angel', 'Crespo Santos', '4718456777', 'angel.crespo@empresa.com', 'Operaciones'),
+('Cristina', 'Lorenzo Montero', '4818456888', 'cristina.lorenzo@empresa.com', 'Tecnología'),
+('Mario', 'Calvo Ferrer', '4918456999', 'mario.calvo@empresa.com', 'Gerencia'),
+('Susana', 'Cano Nieto', '5018456000', 'susana.cano@empresa.com', 'Finanzas'),
+('Julian', 'Gallego Aguilar', '5118456111', 'julian.gallego@empresa.com', 'Mercadeo'),
+('Elvira', 'Herrero Pascual', '5218456222', 'elvira.herrero@empresa.com', 'Tecnología'),
+('Hector', 'Marquez Ibañez', '5318456333', 'hector.marquez@empresa.com', 'Operaciones'),
+('Beatriz', 'Soria Duran', '5418456444', 'beatriz.soria@empresa.com', 'Recursos Humanos'),
+('Ivan', 'Arias Vicente', '5518456555', 'ivan.arias@empresa.com', 'Tecnología'),
+('Raquel', 'Benitez Carmona', '5618456666', 'raquel.benitez@empresa.com', 'Finanzas'),
+('Alvaro', 'Ferrer Soler', '5718456777', 'alvaro.ferrer@empresa.com', 'Mercadeo'),
+('Natalia', 'Santiago Fuentes', '5818456888', 'natalia.santiago@empresa.com', 'Tecnología'),
+('Sergio', 'Campos Estevez', '5918456999', 'sergio.campos@empresa.com', 'Operaciones');
+
+
+-- 3. SEMILLA PARA VEHÍCULOS (100)
+INSERT INTO Vehiculos (id_usuario, placa, tipo_vehiculo, marca, color) VALUES
+(1, 'FGR-123', 'Carro', 'Mercedes-Benz', 'Negro'),
+(2, 'HJK-456', 'Carro', 'BMW', 'Blanco'),
+(3, 'LMN-789', 'Carro', 'Audi', 'Gris'),
+(4, 'PQS-101', 'Carro', 'Volvo', 'Azul'),
+(5, 'TUV-212', 'Carro', 'Mazda', 'Rojo'),
+(6, 'WXY-323', 'Carro', 'Toyota', 'Plata'),
+(7, 'ZAB-434', 'Carro', 'Ford', 'Negro'),
+(8, 'CDE-545', 'Carro', 'Kia', 'Blanco'),
+(9, 'FGH-656', 'Carro', 'Hyundai', 'Gris'),
+(10, 'IJK-767', 'Carro', 'Mercedes-Benz', 'Azul'),
+(11, 'LMN-878', 'Carro', 'BMW', 'Rojo'),
+(12, 'PQS-989', 'Carro', 'Audi', 'Plata'),
+(13, 'TUV-090', 'Carro', 'Volvo', 'Negro'),
+(14, 'WXY-101', 'Carro', 'Mazda', 'Blanco'),
+(15, 'ZAB-212', 'Carro', 'Toyota', 'Gris'),
+(16, 'CDE-323', 'Carro', 'Ford', 'Azul'),
+(17, 'FGH-434', 'Carro', 'Kia', 'Rojo'),
+(18, 'IJK-545', 'Carro', 'Hyundai', 'Plata'),
+(19, 'LMN-656', 'Carro', 'Mercedes-Benz', 'Negro'),
+(20, 'PQS-767', 'Carro', 'BMW', 'Blanco'),
+(21, 'TUV-878', 'Carro', 'Audi', 'Gris'),
+(22, 'WXY-989', 'Carro', 'Volvo', 'Azul'),
+(23, 'ZAB-090', 'Carro', 'Mazda', 'Rojo'),
+(24, 'CDE-101', 'Carro', 'Toyota', 'Plata'),
+(25, 'FGH-212', 'Carro', 'Ford', 'Negro'),
+(26, 'IJK-323', 'Carro', 'Kia', 'Blanco'),
+(27, 'LMN-434', 'Carro', 'Hyundai', 'Gris'),
+(28, 'PQS-545', 'Carro', 'Mercedes-Benz', 'Azul'),
+(29, 'TUV-656', 'Carro', 'BMW', 'Rojo'),
+(30, 'WXY-767', 'Carro', 'Audi', 'Plata'),
+(31, 'ZAB-878', 'Carro', 'Volvo', 'Negro'),
+(32, 'CDE-989', 'Carro', 'Mazda', 'Blanco'),
+(33, 'FGH-090', 'Carro', 'Toyota', 'Gris'),
+(34, 'IJK-101', 'Carro', 'Ford', 'Azul'),
+(35, 'LMN-212', 'Carro', 'Kia', 'Rojo'),
+(36, 'PQS-323', 'Carro', 'Hyundai', 'Plata'),
+(37, 'TUV-434', 'Carro', 'Mercedes-Benz', 'Negro'),
+(38, 'WXY-545', 'Carro', 'BMW', 'Blanco'),
+(39, 'ZAB-656', 'Carro', 'Audi', 'Gris'),
+(40, 'CDE-767', 'Carro', 'Volvo', 'Azul'),
+(41, 'FGR-124', 'Carro', 'Mercedes-Benz', 'Gris'),
+(42, 'HJK-457', 'Carro', 'BMW', 'Negro'),
+(43, 'LMN-790', 'Carro', 'Audi', 'Blanco'),
+(44, 'PQS-102', 'Carro', 'Volvo', 'Rojo'),
+(45, 'TUV-213', 'Carro', 'Mazda', 'Azul'),
+(46, 'WXY-324', 'Carro', 'Toyota', 'Plata'),
+(47, 'ZAB-435', 'Carro', 'Ford', 'Gris'),
+(48, 'CDE-546', 'Carro', 'Kia', 'Negro'),
+(49, 'FGH-657', 'Carro', 'Hyundai', 'Blanco'),
+(50, 'IJK-768', 'Carro', 'Mercedes-Benz', 'Rojo'),
+(51, 'LMN-879', 'Carro', 'BMW', 'Azul'),
+(52, 'PQS-990', 'Carro', 'Audi', 'Plata'),
+(53, 'TUV-091', 'Carro', 'Volvo', 'Gris'),
+(54, 'WXY-102', 'Carro', 'Mazda', 'Negro'),
+(55, 'ZAB-213', 'Carro', 'Toyota', 'Blanco'),
+(56, 'CDE-324', 'Carro', 'Ford', 'Rojo'),
+(57, 'FGH-435', 'Carro', 'Kia', 'Azul'),
+(58, 'IJK-546', 'Carro', 'Hyundai', 'Plata'),
+(59, 'LMN-657', 'Carro', 'Mercedes-Benz', 'Gris'),
+(60, 'PQS-768', 'Carro', 'BMW', 'Negro'),
+(61, 'TUV-879', 'Carro', 'Audi', 'Blanco'),
+(62, 'WXY-990', 'Carro', 'Volvo', 'Rojo'),
+(63, 'ZAB-091', 'Carro', 'Mazda', 'Azul'),
+(64, 'CDE-102', 'Carro', 'Toyota', 'Plata'),
+(65, 'FGH-213', 'Carro', 'Ford', 'Gris'),
+(66, 'IJK-324', 'Carro', 'Kia', 'Negro'),
+(67, 'LMN-435', 'Carro', 'Hyundai', 'Blanco'),
+(68, 'PQS-546', 'Carro', 'Mercedes-Benz', 'Rojo'),
+(69, 'TUV-657', 'Carro', 'BMW', 'Azul'),
+(70, 'WXY-768', 'Carro', 'Audi', 'Plata'),
+(71, 'XYZ-12A', 'Moto', 'BMW', 'Negro Mate'),
+(72, 'ABC-34B', 'Moto', 'Ducati', 'Rojo'),
+(73, 'DEF-56C', 'Moto', 'Yamaha', 'Azul'),
+(74, 'GHI-78D', 'Moto', 'Honda', 'Blanco'),
+(75, 'JKL-90E', 'Moto', 'Kawasaki', 'Verde'),
+(76, 'MNO-12F', 'Moto', 'Suzuki', 'Gris'),
+(77, 'PQR-34G', 'Moto', 'KTM', 'Naranja'),
+(78, 'STU-56H', 'Moto', 'Harley-Davidson', 'Negro'),
+(79, 'VWX-78I', 'Moto', 'Triumph', 'Plata'),
+(80, 'YZA-90J', 'Moto', 'BMW', 'Blanco'),
+(81, 'BCD-12K', 'Moto', 'Ducati', 'Negro'),
+(82, 'EFG-34L', 'Moto', 'Yamaha', 'Rojo'),
+(83, 'HIJ-56M', 'Moto', 'Honda', 'Azul'),
+(84, 'KLM-78N', 'Moto', 'Kawasaki', 'Blanco'),
+(85, 'NOP-90P', 'Moto', 'Suzuki', 'Verde'),
+(86, NULL, 'Bicicleta', 'Specialized', 'Rojo'),
+(87, NULL, 'Bicicleta', 'Trek', 'Negro'),
+(88, NULL, 'Bicicleta', 'Giant', 'Azul'),
+(89, NULL, 'Bicicleta', 'Scott', 'Gris'),
+(90, NULL, 'Bicicleta', 'Cannondale', 'Verde'),
+(91, NULL, 'Bicicleta', 'GW', 'Amarillo'),
+(92, NULL, 'Bicicleta', 'Orbea', 'Naranja'),
+(93, NULL, 'Patineta', 'Xiaomi', 'Negro'),
+(94, NULL, 'Patineta', 'Segway', 'Gris'),
+(95, NULL, 'Patineta', 'Hiboy', 'Blanco'),
+(96, NULL, 'Patineta', 'GoTrax', 'Azul'),
+(97, NULL, 'Patineta', 'Niu', 'Rojo'),
+(98, NULL, 'Patineta', 'Inokim', 'Negro'),
+(99, NULL, 'Patineta', 'Xiaomi', 'Blanco'),
+(100, NULL, 'Patineta', 'Segway', 'Gris Oscuro');
+
+-- 4. ESCENARIO: OCUPAR PUESTOS Y CREAR REGISTROS DE USO ACTIVOS
+-- Ocupar 30 puestos de carro
+UPDATE PuestosDeParqueo SET estado = 'Ocupado' WHERE id_puesto BETWEEN 1 AND 30;
+INSERT INTO RegistrosDeUso (id_puesto, id_vehiculo, hora_entrada, hora_salida) SELECT id_puesto, (SELECT id_vehiculo FROM Vehiculos WHERE tipo_vehiculo='Carro' ORDER BY RAND() LIMIT 1), NOW() - INTERVAL FLOOR(RAND() * 180) MINUTE, NULL FROM PuestosDeParqueo WHERE id_puesto BETWEEN 1 AND 30;
+
+-- Ocupar 8 puestos de moto
+UPDATE PuestosDeParqueo SET estado = 'Ocupado' WHERE id_puesto BETWEEN 101 AND 108;
+INSERT INTO RegistrosDeUso (id_puesto, id_vehiculo, hora_entrada, hora_salida) SELECT id_puesto, (SELECT id_vehiculo FROM Vehiculos WHERE tipo_vehiculo='Moto' ORDER BY RAND() LIMIT 1), NOW() - INTERVAL FLOOR(RAND() * 120) MINUTE, NULL FROM PuestosDeParqueo WHERE id_puesto BETWEEN 101 AND 108;
+
+-- Ocupar 4 puestos de bicicleta
+UPDATE PuestosDeParqueo SET estado = 'Ocupado' WHERE id_puesto BETWEEN 121 AND 124;
+INSERT INTO RegistrosDeUso (id_puesto, id_vehiculo, hora_entrada, hora_salida) SELECT id_puesto, (SELECT id_vehiculo FROM Vehiculos WHERE tipo_vehiculo='Bicicleta' ORDER BY RAND() LIMIT 1), NOW() - INTERVAL FLOOR(RAND() * 60) MINUTE, NULL FROM PuestosDeParqueo WHERE id_puesto BETWEEN 121 AND 124;
+
+-- Ocupar 3 puestos de patineta
+UPDATE PuestosDeParqueo SET estado = 'Ocupado' WHERE id_puesto BETWEEN 141 AND 143;
+INSERT INTO RegistrosDeUso (id_puesto, id_vehiculo, hora_entrada, hora_salida) SELECT id_puesto, (SELECT id_vehiculo FROM Vehiculos WHERE tipo_vehiculo='Patineta' ORDER BY RAND() LIMIT 1), NOW() - INTERVAL FLOOR(RAND() * 45) MINUTE, NULL FROM PuestosDeParqueo WHERE id_puesto BETWEEN 141 AND 143;
+
+
+-- 5. ESCENARIO: CREAR REGISTROS DE USO HISTÓRICOS (150 registros finalizados)
+INSERT INTO RegistrosDeUso (id_puesto, id_vehiculo, hora_entrada, hora_salida)
+SELECT
+    (SELECT id_puesto FROM PuestosDeParqueo WHERE tipo_puesto = 'Carro' AND estado = 'Disponible' ORDER BY RAND() LIMIT 1),
+    (SELECT id_vehiculo FROM Vehiculos WHERE tipo_vehiculo = 'Carro' ORDER BY RAND() LIMIT 1),
+    NOW() - INTERVAL FLOOR(RAND() * 30) DAY - INTERVAL FLOOR(RAND() * 12) HOUR,
+    NOW() - INTERVAL FLOOR(RAND() * 30) DAY
+FROM
+    information_schema.tables
+LIMIT 100; -- 100 registros históricos de carros
+
+INSERT INTO RegistrosDeUso (id_puesto, id_vehiculo, hora_entrada, hora_salida)
+SELECT
+    (SELECT id_puesto FROM PuestosDeParqueo WHERE tipo_puesto = 'Moto' AND estado = 'Disponible' ORDER BY RAND() LIMIT 1),
+    (SELECT id_vehiculo FROM Vehiculos WHERE tipo_vehiculo = 'Moto' ORDER BY RAND() LIMIT 1),
+    NOW() - INTERVAL FLOOR(RAND() * 30) DAY - INTERVAL FLOOR(RAND() * 12) HOUR,
+    NOW() - INTERVAL FLOOR(RAND() * 30) DAY
+FROM
+    information_schema.tables
+LIMIT 50; -- 50 registros históricos de motos
