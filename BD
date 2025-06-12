@@ -1,0 +1,40 @@
+-- Tabla para almacenar los datos de los usuarios (empleados)
+CREATE TABLE Usuarios (
+    id_usuario INT PRIMARY KEY AUTO_INCREMENT,
+    nombre VARCHAR(100) NOT NULL,
+    apellido VARCHAR(100) NOT NULL,
+    documento VARCHAR(50) NOT NULL UNIQUE,
+    email VARCHAR(100) NOT NULL UNIQUE,
+    area_empresa VARCHAR(100)
+);
+
+-- Tabla para almacenar los vehículos de los usuarios
+CREATE TABLE Vehiculos (
+    id_vehiculo INT PRIMARY KEY AUTO_INCREMENT,
+    id_usuario INT NOT NULL,
+    placa VARCHAR(10) UNIQUE, -- Única para autos y motos, puede ser NULL para otros
+    tipo_vehiculo ENUM('Carro', 'Moto', 'Bicicleta', 'Patineta') NOT NULL,
+    marca VARCHAR(50),
+    color VARCHAR(50),
+    FOREIGN KEY (id_usuario) REFERENCES Usuarios(id_usuario)
+);
+
+-- Tabla para definir cada uno de los puestos de parqueo
+CREATE TABLE PuestosDeParqueo (
+    id_puesto INT PRIMARY KEY AUTO_INCREMENT,
+    codigo_puesto VARCHAR(10) NOT NULL UNIQUE, -- ej: A101, M05, B12
+    piso INT NOT NULL,
+    tipo_puesto ENUM('Carro', 'Moto', 'Bicicleta', 'Patineta') NOT NULL,
+    estado ENUM('Disponible', 'Ocupado', 'FueraDeServicio') NOT NULL DEFAULT 'Disponible'
+);
+
+-- Tabla para registrar el historial de uso de los parqueaderos
+CREATE TABLE RegistrosDeUso (
+    id_registro INT PRIMARY KEY AUTO_INCREMENT,
+    id_puesto INT NOT NULL,
+    id_vehiculo INT NOT NULL,
+    hora_entrada DATETIME NOT NULL,
+    hora_salida DATETIME, -- NULL si el vehículo sigue en el puesto
+    FOREIGN KEY (id_puesto) REFERENCES PuestosDeParqueo(id_puesto),
+    FOREIGN KEY (id_vehiculo) REFERENCES Vehiculos(id_vehiculo)
+);
